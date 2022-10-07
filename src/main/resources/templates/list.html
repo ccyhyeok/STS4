@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+	<li th:each="data: ${member}"
+				th:text="${data.mno} + ', ' + ${data.mname}
+				+ ', ' + ${data.email} + ', ' + ${data.pwd}
+				+ ', ' + ${#dates.format(data.cre_date, 'yyyy-MM-dd HH:mm:ss')}
+				+ ', ' + ${#dates.format(data.mod_date, 'yyyy-MM-dd HH:mm:ss')}">
+				</li>
+	</ul>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
